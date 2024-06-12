@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Lookup</title>
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/free-vector/illustration-digital-devices-collection_53876-5292.jpg?t=st=1717774911~exp=1717778511~hmac=1d30a0d577a36d94c34463d56e222c28f26ea1ad7c42c95a84f446eb36479c5a&w=1060");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            padding: 30px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Phone Number Lookup</h1>
+        <form action="/lookup" method="post">
+            <input type="text" name="phone_number" placeholder="Enter Phone Number">
+            <button type="submit">Lookup</button>
+        </form>
+    </div>
+</body>
+</html>

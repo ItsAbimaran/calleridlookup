@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/free-photo/closeup-mobile-phone_53876-15087.jpg?t=st=1717775192~exp=1717778792~hmac=cc2975a6db2af3b3183ec52d13bba0a4a32a3191f36f4fdcf72a5d4380796f06&w=996");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .result-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background: #0056b3;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Caller ID Result</title>
+</head>
+<body>
+    <div class="container">
+        <div class="result-container">
+            <h1>Caller ID Result</h1>
+            {% if result.error %}
+                <p>{{ result.error }}</p>
+            {% else %}
+                <ul>
+                    <li><strong>Number:</strong> {{ result.number }}</li>
+                    <li><strong>Country:</strong> {{ result.country }}</li>
+                    <li><strong>Carrier:</strong> {{ result.carrier }}</li>
+                    <li><strong>Line Type:</strong> {{ result.line_type }}</li>
+                    <li><strong>Caller Name:</strong> {{ result.caller_name }}</li>
+                    <li><strong>Caller Type:</strong> {{ result.caller_type }}</li>
+                </ul>
+            {% endif %}
+            <a href="/">Go back</a>
+        </div>
+    </div>
+</body>
+</html>
